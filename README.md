@@ -1,1 +1,2 @@
-# Frontend Mentor Challenge Base Apparel Coming Soon Page
+# Frontend Mentor Challenge 
+Base Apparel Coming Soon Page

@@ -28,9 +28,16 @@
     <div class="coming-soon">
       <h1>We're<br>coming<br>soon</h1>
       <p>  Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <label for="email">Email Address</label>
-      <input type="email" name="email" id="email">
-      <button type="submit"><img src="./images/icon-arrow.svg" alt="Submit Button"></button>
+      <form>
+        <div class="email-input">
+          <input id="emailAddress" type="email" size="64" maxLength="64" required
+                 placeholder="Email Address" pattern=".+@beststartupever.com"
+                 title="Please provide only a Best Startup Ever corporate e-mail address">
+        </div>
+        <div class="submit">
+          <input type="image" src="./images/icon-arrow.svg" alt="Submit Email" width="12" height="20">
+        </div>
+       </form>
     </div>
   </div>
 

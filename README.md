@@ -1,10 +1,12 @@
 # Frontend Mentor Challenge 
 
-## Challenge: Build out coming soon based on photo and check that submitted form is not empty and in correct email format
+## Challenge: 
+
+Build out coming soon based on photo and check that submitted form is not empty and in correct email format
 
 1. Desktop:
 
-    ![Challenge Desktop Design for 1440px](https://github.com/meilani/baseApparel/blob/master/images/desktop-preview.jpg "Desktop Design for 1440px")
+    ![Challenge Desktop Design for 1440px](https://github.com/meilani/baseApparel/blob/master/images/desktop-design.jpg "Desktop Design for 1440px")
 
 2. Mobile:
 

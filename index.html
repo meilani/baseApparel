@@ -33,13 +33,18 @@
         <form>
           <div class="email-input">
             <input id="email-address"  class="email-address" type="email" maxLength="40" required
-                   placeholder="Email Address" pattern=".+@beststartupever.com"
+                   placeholder="Email Address" pattern=".+@email.com"
                    title="Please enter a valid email address">
+                  <div class="error">
+                    <img src="./images/icon-error.svg" alt="Email not valid">
+                  </div>
           </div>
           <div class="submit">
-            <input type="image" src="./images/icon-arrow.svg" alt="Submit Email" width="12" height="20">
+            <input type="image" id="submit" src="./images/icon-arrow.svg" alt="Submit Email" width="12" height="20">
           </div>
-         </form>
+        </form>
+        <div class="invalid-email"><p>Please provide a valid email</p></div>
+        <div class="valid-email"><p>Thanks for subscribing!</p></div>
       </div>
 
     </div>

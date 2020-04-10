@@ -1,18 +1,4 @@
-/*
-# Front-end Style Guide
-
-- Mobile: 375px
-- Desktop: 1440px
-- Desaturated Red: hsl(0, 36%, 70%)
-- Soft Red: hsl(0, 93%, 68%)
-- Dark Grayish Red: hsl(0, 6%, 24%)
-- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
-- Font size: 16px
-- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
-- Weights: 300, 400, 600*
-
-*/
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
 /************************
     General Styles
@@ -22,13 +8,15 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    background: -o-linear-gradient(315deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     background-image:
         url('../images/bg-pattern-desktop.svg');
@@ -54,20 +42,32 @@ p {
 form {
     border: 1px solid hsl(0, 36%, 70%);
     border-radius: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-left: 15px;
     width: 100%;
 }
 
 
 .container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 100px 1fr 50px;
     grid-template-rows: 100px 1fr 50px;
+    -ms-grid-columns: 60vw 40vw;
     grid-template-columns: 60vw 40vw;
-    grid-template-areas:
+        grid-template-areas:
         "logo photo"
         "soon photo"
         "footer photo";
@@ -79,10 +79,16 @@ form {
 ************************/
 
 .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: logo;
     padding: 50px 15% 0 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /************************
@@ -90,19 +96,24 @@ form {
 ************************/
 
 .photo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
     grid-area: photo;
     text-align: right;
     height: 100vh;
 }
 
 .photo picture {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .photo img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 /************************
@@ -110,6 +121,8 @@ form {
 ************************/
 
 .coming-soon {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: soon;
     padding: 50px 15%;
 }
@@ -136,10 +149,16 @@ form {
 .email-input {
     width: 60%;
     padding: 0 5px 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 40px;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
 }
 
@@ -157,6 +176,22 @@ form {
     outline: none;
 }
 
+.email-address::-webkit-input-placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.email-address::-moz-placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.email-address:-ms-input-placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.email-address::-ms-input-placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
 .email-address::placeholder {
     color: hsl(0, 36%, 70%);
 }
@@ -167,22 +202,36 @@ form {
 }
 
 .submit {
+    background: -o-linear-gradient(315deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100px;
     height: 50px;
     border-radius: 25px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     z-index: 2;
     border: 1px solid hsl(0, 80%, 86%);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .submit:hover {
-    box-shadow: 5px 5px 10px hsl(0, 80%, 86%);
-    transform: scale(1.1);
+    -webkit-box-shadow: 5px 5px 10px hsl(0, 80%, 86%);
+            box-shadow: 5px 5px 10px hsl(0, 80%, 86%);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 #submit {
@@ -205,6 +254,8 @@ form {
 ************************/
 
 .footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: footer;
 }
 
@@ -224,6 +275,7 @@ form {
 
 @media (max-width: 625px) {
     body {
+        background: -o-linear-gradient(315deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
         background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
         background-size: 500px 100%;
         text-align: center;
@@ -235,9 +287,11 @@ form {
     }
 
     .container {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        -ms-grid-rows: 85px 250px 1fr 50px;
         grid-template-rows: 85px 250px 1fr 50px;
-        grid-template-areas:
+            grid-template-areas:
             "logo"
             "photo"
             "soon"
@@ -260,7 +314,8 @@ form {
     }
 
     picture img {
-        object-position: top;
+        -o-object-position: top;
+           object-position: top;
     }
 
     .coming-soon {
@@ -270,6 +325,27 @@ form {
     .notice {
         margin-bottom: 0;
         text-align: left;
+    }
+
+    .logo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .photo {
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 1;
+    }
+
+    .coming-soon {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .footer {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
     }
 }
 

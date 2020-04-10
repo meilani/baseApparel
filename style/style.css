@@ -27,13 +27,13 @@ h1 {
     text-transform: uppercase;
     font-weight: 600;
     color: hsl(0, 6%, 24%);
-    line-height: 1.3em;
+    line-height: 1.2em;
     font-size: 3em;
     letter-spacing: .3em;
 }
 
 p {
-    color: hsl(0, 6%, 24%);
+    color: #874040;
     line-height: 1.7em;
 }
 
@@ -132,7 +132,7 @@ form {
 
 .pink-header {
     font-weight: 300;
-    color: hsl(0, 36%, 70%);
+    color: #874040;
 }
 
 /************************
@@ -142,6 +142,10 @@ form {
 .form {
     grid-area: form;
     max-width: 500px;
+}
+
+label {
+    display: none;
 }
 
 .email-input {

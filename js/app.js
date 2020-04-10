@@ -4,6 +4,7 @@ let email = document.querySelector('.email-address');
 let error = document.querySelector('.error');
 let invalid = document.querySelector('.invalid-email');
 let valid = document.querySelector('.valid-email');
+let form = document.querySelector('form');
 
 
 function getPhoto(e) {
@@ -24,12 +25,14 @@ function checkEmail(e) {
     error.style.display = "block";
     invalid.style.display = "block";
     valid.style.display = "none";
+    form.style.borderColor = "#F96464";
     email.focus;
     return false;
  } else {
     error.style.display = "none";
     invalid.style.display = "none";
     valid.style.display = "block";
+    form.style.borderColor = "#CE9797";
     email.focus;
     email.value = "";
     return false;

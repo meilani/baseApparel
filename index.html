@@ -2,18 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/style.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -22,7 +17,7 @@
     </div>
     <div class="photo">
       <picture>
-        <source srcset="./images/hero-mobile.jpg" media="(max-width: 525px)">
+        <source srcset="./images/hero-mobile.jpg" media="(max-width: 600px)">
         <img src="./images/hero-desktop.jpg" alt="Woman in orange shirt standing in front of a plant" id="photo">
       </picture>
     </div>
@@ -35,16 +30,16 @@
             <input id="email-address"  class="email-address" type="email" maxLength="40" required
                    placeholder="Email Address" pattern=".+@email.com"
                    title="Please enter a valid email address">
-                  <div class="error">
-                    <img src="./images/icon-error.svg" alt="Email not valid">
-                  </div>
+          </div>
+          <div class="error">
+            <img src="./images/icon-error.svg" alt="Email not valid">
           </div>
           <div class="submit">
             <input type="image" id="submit" src="./images/icon-arrow.svg" alt="Submit Email" width="12" height="20">
           </div>
         </form>
-        <div class="invalid-email"><p>Please provide a valid email</p></div>
-        <div class="valid-email"><p>Thanks for subscribing!</p></div>
+        <div class="invalid-email notice"><p>Please provide a valid email</p></div>
+        <div class="valid-email notice"><p>Thanks for subscribing!</p></div>
       </div>
 
     </div>
